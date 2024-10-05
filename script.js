@@ -34,3 +34,5 @@ document.addEventListener("DOMContentLoaded", function() {
     updateDate();
     setInterval(updateTime, 60000);
 });
+
+document.addEventListener('contextmenu', event => event.preventDefault());

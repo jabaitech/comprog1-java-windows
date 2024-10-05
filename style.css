@@ -11,9 +11,9 @@ body {
     user-select: none;
     margin: 0;
     display: flex;
-    justify-content: center; /* Horizontal centering */
-    align-items: center; /* Vertical centering */
-    background-color: #f0f0f0; /* Optional background color */
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
 }
 
 #mainContainer {
@@ -23,7 +23,7 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    padding: 20px;
+    padding: 10px;
 }
 
 #ICON {
@@ -33,7 +33,7 @@ body {
 }
 
 .iconHolder:hover {
-    background-color: rgba(167, 207, 253, 0.322);
+    background-color: rgba(148, 198, 255, 0.274);
     /*opacity: 70%;*/
 }
 
@@ -68,7 +68,7 @@ p {
 
 #bottomBar {
     display: grid;
-    grid-template-columns: auto 1fr auto; /* Windows icon, search bar, time */
+    grid-template-columns: auto 1fr auto;
     align-items: center;
     background-color: rgb(24, 24, 24);
     width: 100%;
@@ -151,6 +151,7 @@ p {
 
 
 #fullWindow {
+    box-shadow: 1px 1px 10px #000000;
     background-color: rgba(255, 255, 255, 1);
     width: 70%;
     height: 70%;
@@ -170,10 +171,11 @@ p {
 
 
 #window {
+    
     overflow: hidden;
     height: 100%;
     width: 100%;
-    /*
+    /* OLD
     margin: auto;
     height: 70%;
     width: 70%;
@@ -197,13 +199,13 @@ p {
 
 #fullWindow > button {
     color: black;
-    width: 32px; /* Square button */
-    height: 50px; /* Square button */
-    font-size: 50px; /* Smaller font for the "X" */
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
     cursor: pointer;
-    text-align: center; /* Center text horizontally */
-    margin: 0; /* Ensure no additional margin */
-    transition: background-color 0.2s ease; /* Smooth transition for hover */
+    text-align: center;
+    margin: 0;
+    transition: red 0.2s ease;
 }
 
 #closeWindowButton:hover {
@@ -211,7 +213,7 @@ p {
 }
 
 #closeWindowButton:active {
-    background-color: #c50f1f; /* Darker red when clicked */
+    background-color: #c50f1f;
 }
 
 
@@ -224,7 +226,7 @@ p {
 }
 
 #topbar {
-    /*
+    /* OLD
     height: 35px;
     width: 100%;
     top: 0;
@@ -234,10 +236,10 @@ p {
     */
 
     display: flex;
-    justify-content: flex-end; /* Aligns button to the right */
+    justify-content: flex-end;
     background-color: #2b2b2b;
     border-bottom: 1px solid #000000;
-    height: 32px; /* Adjust height to match Windows 10 style */
+    height: 32px;
     align-items: center; 
     padding: 0;
     padding-right: 10px;
