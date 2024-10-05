@@ -33,8 +33,8 @@ body {
 }
 
 .iconHolder:hover {
-    background-color: rgb(167, 207, 253);
-    opacity: 70%;
+    background-color: rgba(167, 207, 253, 0.322);
+    /*opacity: 70%;*/
 }
 
 .icon {
@@ -55,9 +55,11 @@ a.iconHolder {
 }
 
 p {
+    overflow: hidden;
     margin: 0;
     text-align: center;
 }
+
 
 #mainContainer > button {
     height: var(--iconSize);
