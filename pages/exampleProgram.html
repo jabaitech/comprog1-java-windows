@@ -1,29 +1,57 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
+            user-select: none;
             padding: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #title {
+            background-color: bisque;
+            padding-left: 25px;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #content {
+            font-size: 20px;
+            margin-left: 30px;
+            margin-right: 20px;
         }
 
         footer {
             bottom: 0;
-            display:flexbox;
+            display: flexbox;
+        }
+
+        img {
+            width: 60%;
+            position: fixed;
+            display: block;
+            margin-top: 5%;
+            margin-left: 10%;
+            border-radius: 15px;
+            border: 2px solid black;
+            filter: drop-shadow(0px 0px 3px grey);
         }
     </style>
 </head>
 
-<body>
-   
+<body oncontextmenu="return false;">
+
     <div id="card">
         <div id="title">Programming in Java</div>
-        <div id="card-sector-title-exampleprogram"><i>Example program</i></div>
-        <div id="content">Every program consists of a class and a main method. Without them a program cannot function</div>
-           <img id="exampleImg" src="../images/example.png">
+        <div id="content">Every program consists of a class and a main method. Without them a program cannot function
+        </div>
+        <img id="exampleImg" src="../images/example.png">
+        <p><a href="https://www.w3schools.com/">Learn more about Java at w3schools.com</a></p>
     </div>
-    <footer>Made with friendship and pancit canton with san marino</footer>
 </body>
 
 </html>

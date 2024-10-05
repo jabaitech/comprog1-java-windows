@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            user-select: none;
+            padding: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #title {
+            background-color: bisque;
+            padding-left: 25px;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #content {
+            font-size: 20px;
+            margin-left: 30px;
+            margin-right: 20px;
+        }
+
+        footer {
+            bottom: 0;
+            display: flexbox;
+        }
+
+        img {
+            width: 60%;
+            position: fixed;
+            display: block;
+            margin-top: 5%;
+            margin-left: 10%;
+            border-radius: 15px;
+            border: 2px solid black;
+            filter: drop-shadow(0px 0px 3px grey);
+        }
+    </style>
+</head>
+
+<body oncontextmenu="return false;">
+    <div id="card">
+        <div id="title">Difference of Java to other languages</div>
+        <div id="content">
+            <ul>
+                <li><b>Performance:</b> 
+                    <ul>
+                        <li>Java: Slower than C/C++ due to JVM overhead.</li>
+                        <li>Python: Generally slower than Java, interpreted language.</li>
+                        <li>JavaScript: Performance varies; often slower in computation-heavy tasks.</li>
+                    </ul>
+                </li>
+                <li><b>Syntax:</b>
+                    <ul>
+                        <li>Java: Strictly typed; requires explicit declarations.</li>
+                        <li>C#: Similar syntax to Java, more features for Windows applications.</li>
+                        <li>Python: More readable and concise syntax; dynamically typed.</li>
+                    </ul>
+                </li>
+                <li><b>Platform Independence:</b>
+                    <ul>
+                        <li>Java: Write once, run anywhere with JVM.</li>
+                        <li>C#: Primarily Windows; .NET Core supports cross-platform.</li>
+                        <li>Python: Cross-platform, but environment setup can be tricky.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

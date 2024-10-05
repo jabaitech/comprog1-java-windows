@@ -5,7 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
+            user-select: none;
             padding: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #title {
+            background-color: bisque;
+            padding-left: 25px;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #content {
+            font-size: 20px;
+            margin-left: 30px;
+            margin-right: 20px;
         }
 
         footer {
@@ -15,7 +31,7 @@
     </style>
 </head>
 
-<body>
+<body oncontextmenu="return false;">
     <div id="card-aboutjava">
         <div id="title">What is Java?</div>
         <div id="content">
@@ -24,6 +40,5 @@
             <p>In 1995, Sun Microsystems officially announced Java at the SunWorld conference. The same year, Netscape Communications agreed to include Java support in their popular Netscape Navigator browser. This gave Java a huge boost in popularity and exposure, as millions of web users could now access Java applets on their browsers.</p>
         </div>
     </div>
-    <footer style="color: grey;">Made with friendship and pancit canton with san marino</footer>
 </body>
 </html>

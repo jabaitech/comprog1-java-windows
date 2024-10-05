@@ -5,7 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
+            user-select: none;
             padding: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #title {
+            background-color: bisque;
+            padding-left: 25px;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #content {
+            font-size: 20px;
+            margin-left: 30px;
+            margin-right: 20px;
         }
 
         footer {
@@ -15,23 +31,21 @@
     </style>
 </head>
 
-<body>
+<body oncontextmenu="return false;">
     <div id="card">
-        <div id="title">Creating in Java</div>
-        <div id="card-sector-title"><i>How does Java run?</i></div>
+        <div id="title">Writing your first Java project</div>
         <div id="content">
-            <p>Source: Make a document that will be used as a source. Make use of a well-established procedure (In this case, the Java language)
+            <p><b>Source</b>: Make a document that will be used as a source. Make use of a well-established procedure (In this case, the Java language)
                 <br>
-                <br>Compiler: Use a source code compiler to compile your document. The compiler checks for errors and won’t let you compile until It’s satisfied that everything will run correctly.
+                <br><b>Compiler</b>: Use a source code compiler to compile your document. The compiler checks for errors and won’t let you compile until It’s satisfied that everything will run correctly.
+                <i><b>ex. Eclipse & Apache NetBeans</b></i>
                 <br>
-                <br>Output/Byte code: The compiler creates a new document, coded into Java bytecode. Any device that can run Java will be able to interpret and translate this file into something that it can use. The compiled bytecode is platform Independent.
+                <br><b>Byte code</b>: The compiler creates a new document, coded into Java bytecode. Any device that can run Java will be able to interpret and translate this file into something that it can use. The compiled bytecode is platform Independent.
                 <br>
-                <br>JVM: Your friends don’t have a physical Java Machine, but they all have a virtual Java machine (implemented In software) running inside their electronic gadgets. The bytecode is read and executed by the virtual machine.</p>
-            <br></br>
+                <br><b>JVM (Java Virtual Machine)</b>: Your friends don’t have a physical Java Machine, but they all have a virtual Java machine (implemented In software) running inside their electronic gadgets. The bytecode is read and executed by the virtual machine.</p>
             
         </div>
     </div>
-    <footer>Made with friendship and pancit canton with san marino</footer>
 </body>
 
 </html>
