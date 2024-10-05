@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wendos Teen</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+    <div id="mainContainer">
+        <a class="iconHolder">
+            <input id="ICON" type="image" src="./images/roblox.png" alt="IconTest" onclick="changeIframe('./pages/aboutJava.html')">
+            <p>Roblox</p>
+        </a>
+
+        <a class="iconHolder">
+            <input id="ICON" type="image" src="./images/facebook.png" alt="IconTest" onclick="changeIframe('./pages/javaRunning.html')">
+            <p>Facebook</p>
+        </a>
+
+        <a class="iconHolder">
+            <input id="ICON" type="image" src="./images/facebook.png" alt="IconTest" onclick="changeIframe('./pages/exampleProgram.html')">
+            <p>Test</p>
+        </a>
+
+    </div>
+
+
+    <div id="WINDOW_HOLDER">
+        <div id="fullWindow">
+            <div id="topbar">
+                <button id="closeWindowButton" onclick="closeWindow()">X</button>
+            </div>
+            <div id="window">
+                <iframe name="FRAME" id="content-iframe" frameborder="0" scrolling="yes" allowTransparency="no" src="/pages/aboutJava.html"></iframe>
+            </div>
+        </div>
+        
+        
+    </div>
+
+    <div id="bottomBar">
+        <a id="time">7:00 AM</a>
+        <a id="date">1/1/1999</a>
+    </div>
+</body>
+
+</html>
