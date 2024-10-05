@@ -1,0 +1,12 @@
+body {
+    padding: 30px;
+}
+
+footer {
+    bottom: 0;
+    display:flexbox;
+}
+
+#content>p {
+    margin-left: 20px;
+}

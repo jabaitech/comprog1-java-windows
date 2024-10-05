@@ -1,13 +1,14 @@
 :root {
     --iconSize: 50px;
+    --color_grey: 
 }
 
 body {
     background-image: url("./images/background.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     user-select: none;
-
     margin: 0;
     display: flex;
     justify-content: center; /* Horizontal centering */
@@ -31,6 +32,11 @@ body {
     margin: auto;
 }
 
+.iconHolder:hover {
+    background-color: rgb(167, 207, 253);
+    opacity: 70%;
+}
+
 .icon {
     width: var(--iconSize);
     position: relative;
@@ -44,7 +50,8 @@ a.iconHolder {
     display: grid;
     align-content: center;
     margin-bottom: 30px;
-    color: white
+    color: white;
+    padding: 5px;
 }
 
 p {
@@ -58,32 +65,88 @@ p {
 }
 
 #bottomBar {
-    position: fixed;
-    z-index: 100;
-    width: 100%;  
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* Windows icon, search bar, time */
+    align-items: center;
     background-color: rgb(24, 24, 24);
     width: 100%;
     height: 45px;
+    position: fixed;
     bottom: 0;
     left: 0;
+    z-index: 100;
+    padding: 0 10px;
+}
+
+.appIcon {
+    margin-top: 6px;
+    float: left;
+    justify-self: left;
+}
+
+.windowsIconHolder {
+    grid-column: 1 / 2;
+    justify-self: start;
+    width: 100%;
+}
+
+#windowsIcon {
+    width: 35px;
+    height: 35px;
+}
+
+#bottomAppIcon {
+    float: left;
+    justify-self: start;
+    width: 35px;
+    height: 35px;
+}
+
+#windowsIcon:hover {
+    background-color: #2b2b2b;
+}
+
+#bar {
+    color: white;
+    background-color: rgb(37, 37, 37);
+    user-select: none;
+    grid-column: 2 / 3;
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    margin-left: 10px;
+    padding-left: 10px;
+    /*border-radius: 2px;*/
+    flex-grow: 1;
+    border: 1px solid gray;
+}
+
+#bar:focus {
+    outline-width: 0;
+}
+
+#timeContainer {
+    grid-column: 3 / 4;
+    justify-self: end;
+    text-align: right;
+    color: white;
+    margin-left: auto;
+    margin-right: 25px;
 }
 
 #time {
-    float: right;
-    margin-right: 25px;
-    margin-top: 2px;
+    display: block;
+    font-size: 16px;
     color: white;
 }
 
 #date {
-    float: right;
-    right: 0;
-    margin-right: 25px;
-    margin-top: 0px;
+    display: block;
+    font-size: 14px;
     color: white;
-    position: absolute;
-    bottom: 0;
 }
+
+
 
 #fullWindow {
     background-color: rgba(255, 255, 255, 1);
@@ -121,7 +184,13 @@ p {
     max-height: 70%;
     margin: auto;
     */
+}
 
+#windowName {
+    float: left;
+    margin-right: auto;
+    margin-left: 10px;
+    color: white;
 }
 
 #fullWindow > button {

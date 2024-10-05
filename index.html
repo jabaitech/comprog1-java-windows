@@ -13,26 +13,31 @@
 
     <div id="mainContainer">
         <a class="iconHolder">
-            <input id="ICON" type="image" src="./images/roblox.png" alt="IconTest" onclick="changeIframe('./pages/aboutJava.html')">
+            <input id="ICON" type="image" src="./images/roblox.png" alt="IconTest" onclick="changeIframe('./pages/aboutJava.html', 'About Java')">
             <p>Roblox</p>
         </a>
 
         <a class="iconHolder">
-            <input id="ICON" type="image" src="./images/facebook.png" alt="IconTest" onclick="changeIframe('./pages/javaRunning.html')">
+            <input id="ICON" type="image" src="./images/facebook.png" alt="IconTest" onclick="changeIframe('./pages/javaRunning.html', 'Running Java')">
             <p>Facebook</p>
         </a>
 
         <a class="iconHolder">
-            <input id="ICON" type="image" src="./images/facebook.png" alt="IconTest" onclick="changeIframe('./pages/exampleProgram.html')">
+            <input id="ICON" type="image" src="./images/facebook.png" alt="IconTest" onclick="changeIframe('./pages/exampleProgram.html', 'Example Program')">
             <p>Test</p>
+        </a>
+
+        <a class="iconHolder">
+            <input id="ICON" type="image" src="./images/desktopicon.png" alt="IconTest" onclick="changeIframe('./pages/groupMembers.html', 'Your Desktop')">
+            <p>Desktop</p>
         </a>
 
     </div>
 
-
     <div id="WINDOW_HOLDER">
         <div id="fullWindow">
             <div id="topbar">
+                <p id="windowName">Window Name</p>
                 <button id="closeWindowButton" onclick="closeWindow()">X</button>
             </div>
             <div id="window">
@@ -44,8 +49,15 @@
     </div>
 
     <div id="bottomBar">
-        <a id="time">7:00 AM</a>
-        <a id="date">1/1/1999</a>
+        <a class="windowsIconHolder">
+            <input id="windowsIcon" type="image" src="./images/windowsicon.png">
+        </a>
+        <input type="text" placeholder="Type here to search..." id="bar">
+       
+        <div id="timeContainer">
+            <a id="time">7:00 AM</a>
+            <a id="date">1/1/1999</a>
+        </div>
     </div>
 </body>
 
