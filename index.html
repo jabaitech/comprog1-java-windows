@@ -12,32 +12,32 @@
 
 <body oncontextmenu="return false;">
     <div id="mainContainer">
-        <a class="iconHolder" onclick="changeIframe('./pages/aboutJava.html', 'Roblox')">
+        <a class="iconHolder" onclick="changeIframe('./pages/aboutJava.html', 'Roblox', './images/roblox.png')">
             <img id="ICON" src="./images/roblox.png" alt="RobloxIcon">
             <p>Roblox</p>
         </a>
 
-        <a class="iconHolder" onclick="changeIframe('./pages/javaRunning.html', 'Facebook Desktop')">
+        <a class="iconHolder" onclick="changeIframe('./pages/javaRunning.html', 'Facebook Desktop', './images/facebook.png')">
             <img id="ICON" src="./images/facebook.png" alt="FacebookIcon">
             <p>Facebook</p>
         </a>
 
-        <a class="iconHolder" onclick="changeIframe('./pages/exampleProgram.html', 'Google Chrome')">
+        <a class="iconHolder" onclick="changeIframe('./pages/exampleProgram.html', 'Google Chrome', './images/chromeicon.png')">
             <img id="ICON" src="./images/chromeicon.png" alt="ChromeIcon">
             <p>Chrome</p>
         </a>
 
-        <a class="iconHolder" onclick="changeIframe('./pages/usesOfJava.html', 'Riot Games')">
+        <a class="iconHolder" onclick="changeIframe('./pages/usesOfJava.html', 'Riot Games', './images/valorant.png')">
             <img id="ICON" src="./images/valorant.png" alt="ValorantIcon">
             <p>Valorant</p>
         </a>
 
-        <a class="iconHolder" onclick="changeIframe('./pages/advantagesOfJava.html', 'Adobe Photoshop')">
+        <a class="iconHolder" onclick="changeIframe('./pages/advantagesOfJava.html', 'Adobe Photoshop', './images/photoshop.png')">
             <img id="ICON" src="./images/photoshop.png" alt="PhotoshopIcon">
             <p>Adobe PS</p>
         </a>
 
-        <a class="iconHolder" onclick="changeIframe('./pages/groupMembers.html', 'Your Desktop')">
+        <a class="iconHolder" onclick="changeIframe('./pages/groupMembers.html', 'Your Desktop', './images/desktopicon.png')">
             <img id="ICON" src="./images/desktopicon.png" alt="DesktopIcon">
             <p>Desktop</p>
         </a>
@@ -47,11 +47,12 @@
     <div id="WINDOW_HOLDER">
         <div id="fullWindow">
             <div id="topbar">
+                <img id="topbarIcon" src="./images/roblox.png">
                 <p id="windowName">Window Name</p>
                 <button id="closeWindowButton" onclick="closeWindow()">X</button>
             </div>
             <div id="window">
-                <iframe name="FRAME" id="content-iframe" frameborder="0" scrolling="yes" allowTransparency="no" src="/pages/aboutJava.html"></iframe>
+                <iframe name="FRAME" id="content-iframe" frameborder="0" scrolling="no" allowTransparency="no" src="/pages/aboutJava.html"></iframe>
             </div>
         </div>
         
@@ -59,10 +60,11 @@
     </div>
 
     <div id="bottomBar">
-        <a class="windowsIconHolder">
+        <!-- <a class="windowsIconHolder"> -->
             <input id="windowsIcon" type="image" src="./images/windowsicon.png">
-        </a>
+        <!-- </a> -->
         <input type="text" placeholder="Type here to search..." id="bar">
+        
        
         <div id="timeContainer">
             <a id="time">7:00 AM</a>

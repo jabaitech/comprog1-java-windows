@@ -6,10 +6,11 @@ function closeWindow() {
     document.getElementById('WINDOW_HOLDER').style.display = 'none';
 }
 
-function changeIframe(url, windowName) {
+function changeIframe(url, windowName, icon) {
     openWindow();
     document.getElementById('content-iframe').src = url;
     document.getElementById('windowName').innerText = windowName;
+    document.getElementById('topbarIcon').src = icon
 }
 
 function updateTime() {
