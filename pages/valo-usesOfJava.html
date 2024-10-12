@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            user-select: none;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: white;
+            background-image: url("../images//riotbg.jpg");
+            background-size: cover;
+        }
+
+        #title {
+            background-color: bisque;
+            padding-left: 25px;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #main {
+            display: flex;
+            height: 100vh;
+            width: auto;
+            margin: 0;
+            justify-content: space-between;
+            background-color: rgba(0, 0, 0, 0.548);;
+        }
+
+        #sidebar {
+            background-color: rgb(255, 255, 255);
+            height: auto;
+            left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            /* align-items: center; */
+            width: 340px;
+            padding-top: 20px;
+        }
+
+        #riotlogo {
+            margin: 0;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            width: 120px;
+            filter: brightness(120%);
+        }
+
+        .login-creds {
+            display: flex;
+            align-content: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .login-creds>input {
+            width: 70%;
+            height: 40px;
+            padding-left: 10px;
+            border-radius: 5px;
+
+            background-color: rgba(255, 88, 227, 0.233);
+            border: 2px solid rgba(255, 0, 212, 0.486);
+        }
+
+        .login-creds>input::placeholder {
+            font-weight: bold;
+            font-size: 10px;
+        }
+
+        .login-creds>*:focus {
+            outline: 2px solid rgba(255, 0, 212, 0.712);
+        }
+
+        .login-creds>#password {
+            margin-top: 15px;
+        }
+
+        .extra {
+            margin-left: 40px;
+            margin-top: 20px;
+            font-weight: 400;
+        }
+
+        #next-button {
+            border: 1px solid rgb(196, 196, 196);
+            color: rgb(196, 196, 196);
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: normal;
+            padding: 20px;
+            font-size: 20px;
+            border-radius: 20px;
+            margin: auto;
+            margin-top: 30vh;
+        }
+
+        #fake-version {
+            color: rgb(196, 196, 196);
+            margin: auto;
+            margin-top: 10%;
+
+        }
+
+        #content {
+            font-size: 17px;
+            display: flex;
+            overflow: hidden;
+            color: white;
+            text-align: end;
+            padding: 0;
+            margin: 0;
+            align-items: center;
+        }
+
+        ul > li {
+            list-style-type: none;
+            padding-bottom: 20px;
+            padding-left: auto;
+            width: 100vh;
+            margin: 0;
+            align-self: flex-end;
+            padding-bottom: 25px;
+            padding-right: 50px;
+        }
+    </style>
+</head>
+
+<body oncontextmenu="return false;">
+
+    <div id="card">
+        <span id="main">
+            <div id="sidebar">
+                <img src="../images/riotlogo.png" id="riotlogo">
+
+                <span class="login-creds">
+                    <input type="text" id="username" placeholder="USERNAME" autocomplete="off">
+
+                    <input type="password" id="password" placeholder="PASSWORD" autocomplete="off">
+                </span>
+
+                <span class="extra">
+                    <input type="checkbox"><a>Stay signed in</a>
+                </span>
+
+                <a id="next-button">></a>
+
+                <a id="fake-version">v.1.0.0</a>
+                <!-- <input type="button"> -->
+            </div>
+
+            <div id="content">
+                <ul>
+                    <li><b>Web Development:</b> Dynamic web apps using Spring, Hibernate, JSF.</li>
+                    <li><b>Mobile Development:</b> Primarily for Android apps.</li>
+                    <li><b>Enterprise Applications:</b> Large-scale applications with Java EE.</li>
+                    <li><b>Desktop Applications:</b> Cross-platform apps using JavaFX and Swing.</li>
+                    <li><b>Scientific Applications:</b> Scientific computing with libraries like Apache Commons Math.
+                    </li>
+                    <li><b>Cloud-Based Applications:</b> Scalable services in the cloud.</li>
+                    <li><b>Embedded Systems:</b> IoT devices with Java ME.</li>
+                    <li><b>Game Development:</b> Mobile and browser-based games using LibGDX.</li>
+                    <li><b>Financial Services:</b> Secure applications for banking and finance.</li>
+                    <li><b>AI and Machine Learning:</b> Libraries like Weka and Deeplearning4j.</li>
+                    <li><b>Middleware:</b> Solutions for communication between applications.</li>
+                </ul>
+            </div>
+        </span>
+    </div>
+</body>
+
+</html>

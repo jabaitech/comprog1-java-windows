@@ -37,3 +37,18 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener('contextmenu', event => event.preventDefault());
+
+//EASTER_EGG
+
+function EASTEREGG() {
+    console.log("RUN EASTEREGG")
+    var input = document.getElementById('searchbar').value;
+
+    console.log("DEBUG :" + input)
+    if (input == 'cornhub') {
+        console.log("Eto na");
+        //TODO: OPEN EASTEREGG
+        // document.getElementById('windowName').innerText = windowName;
+    }
+}
+

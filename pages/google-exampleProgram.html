@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script rel="text" src="/script.js"></script>
+    <style>
+        body {
+            position: fixed;
+            margin: 0;
+            position: relative;
+            user-select: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(29, 42, 53);
+        }
+
+        #main {
+            padding: 50px 30px;
+            height: max-content;
+        }
+
+        #content {
+            color: white;
+            text-align: center;
+            background-color: black;
+            border: 1px solid grey;
+            width: fit-content;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size: 20px;
+            margin-right: 20px;
+            margin-bottom: 40px;
+            border-radius: 10px;
+        }
+
+        #codeExample {
+            display: flex;
+            align-items: center;
+        }
+
+        #console-label {
+            margin: 0;
+            padding: 10px;
+            width: fit-content;
+            display: block;
+            color: white;
+            background-color: black;
+            border: 1px solid grey;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        code {
+            margin: 0;
+            border: 1px solid grey;
+            color: white;
+            font-size: 20px;
+            display: flex;
+            padding: 20px 100px 50px 20px;
+            background-color: black;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        #searchbar-holder {
+            height: 20px;
+            display: flex;
+            background-color: rgb(255, 255, 255);
+            padding-left: 25px;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            z-index: 50;
+            align-items: center;
+        }
+
+        #searchbar-holder>#leftArrow {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        #searchbar-holder>#rightArrow {
+            color: grey;
+        }
+
+        #searchbar-holder>#refresh {
+            margin-left: 10%;
+            margin-right: 0;
+            rotate: 120deg;
+        }
+
+
+        #searchbar {
+            border: 1px solid grey;
+            background-color: rgb(235, 235, 235);
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            margin-left: 10px;
+            width: 70%;
+            border-radius: 5px;
+        }
+
+        #tabs {
+            position: relative;
+            list-style: none;
+            height: fit-content;
+            background-color: rgb(238, 238, 238);
+            padding-top: 5px;
+            display: flex;
+            padding-left: 10px;
+        }
+
+        #tabs>#tab {
+            width: 200px;
+            height: 20px;
+            margin-right: 5px;
+            background-color: rgb(255, 255, 255);
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            /*filter: drop-shadow(0px 0px 2px black);*/
+            padding-bottom: 5px;
+        }
+
+        #close_tab {
+            float: right;
+            margin-right: 10px;
+            font-weight: 500;
+
+        }
+
+        #tabs>#inactive-tab {
+            width: 200px;
+            height: 20px;
+            margin-right: 5px;
+            background-color: rgb(223, 223, 223);
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            /*filter: drop-shadow(0px 0px 2px black);*/
+            padding-bottom: 5px;
+            z-index: 0;
+        }
+
+        #tab-text {
+            margin-left: 10px;
+        }
+
+        footer {
+            bottom: 0;
+            display: flexbox;
+        }
+
+        img {
+            width: 60%;
+            position: inherit;
+            display: block;
+            /*border-radius: 10px;*/
+            border: 2px solid black;
+            filter: drop-shadow(0px 0px 3px green);
+            margin-bottom: 50px;
+            margin: auto;
+        }
+
+        #link {
+            color: green;
+            font-weight: bold;
+            background-color: black;
+            padding: 10px;
+            border: 1px solid grey;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+
+<body oncontextmenu="return false;">
+
+    <div id="tabs">
+        <div id="tab"><a id="tab-text">Programming in Java</a> <a id="close_tab">x</a></div>
+        <div id="inactive-tab"><a id="tab-text">Feliflix</a></div>
+    </div>
+
+    <div id="searchbar-holder">
+        <a id="leftArrow">←</a>
+        <a id="rightArrow">→</a>
+        <a id="refresh">↻</a>
+        <input onfocusout="EASTEREGG()" type="text" id="searchbar"
+            placeholder="https://jabaitech.com/programming_in_java.php&cookies=true" autocomplete="off"></input>
+    </div>
+
+    <div id="main">
+        <div id="content">Every program consists of a class and a main method. Without them a program cannot function
+        </div>
+        <span class="codeExample">
+            <img id="exampleImg" src="../images/example.png">
+            <p id="console-label">Console</p>
+            <code>Output: Hello, World!</code>
+        </span>
+        
+        <p><a href="https://www.w3schools.com/" target="_blank" id="link">Learn more about Java at w3schools.com</a></p>
+    </div>
+</body>
+
+</html>

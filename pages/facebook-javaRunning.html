@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            user-select: none;
+            padding: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(37, 39, 40);
+        }
+
+        #content {
+            font-size: 16px;
+            margin-left: 30px;
+            margin-right: 20px;
+            color: white;
+        }
+
+        #holder {
+            filter: drop-shadow(0px 0px 3px black);
+            background-color: rgb(51, 51, 52);
+            height: fit-content;
+            width: 60%;
+            margin-top: 20%;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        #facebook {
+            margin: 0;
+            display: flex;
+            position:absolute;
+            font-size: 20px;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-image {
+            width: 50px;
+            height: 50px;
+            background-image: url("../images/pfp.jpg");
+            background-size: cover;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .profile-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .profile-name {
+            font-size: 18px;
+            color: white;
+            margin-bottom: 2px;
+            margin-top: 0;
+        }
+
+        #bottom > li {
+            list-style: none;
+            display: flex;
+            text-align: center;
+            flex-direction: row;
+            justify-content: flex-start;
+
+
+            color: grey;
+            margin-left: auto;
+            text-align: end;
+            border-bottom: 1px solid grey;
+            width: 100%;
+        }
+
+        li > #reactions {
+            justify-content: flex-start;
+            margin-right: auto;
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        li > #shares {
+            margin-left: 0;
+        }
+
+        #heartIcon {
+            margin-right: 15px;
+        }
+
+        .time-ago {
+            font-size: 13px;
+            color: gray;
+            margin-left: 5px;
+        }
+
+        footer {
+            bottom: 0;
+            display: flexbox;
+        }
+    </style>
+</head>
+
+<body oncontextmenu="return false;">
+    <div id="card">
+        <div id="content">
+            <p id="facebook">Facebook</p>
+            <div id="holder">
+                <div class="profile">
+                    <img class="profile-image">
+                    <div class="profile-text">
+                        <p class="profile-name">Yuan Loja</p>
+                        <span class="time-ago">a day ago</span>
+                    </div>
+                </div>
+
+                <div id="content">
+                    <p>What makes Java?</p>
+                    <p><b>Source</b>: Make a document that will be used as a source. Make use of a well-established procedure (In this case, the Java language)
+                        <br>
+                        <br><b>Compiler</b>: Use a source code compiler to compile your document. The compiler checks for errors and won’t let you compile until It’s satisfied that everything will run correctly.
+                        <i><b>ex. Eclipse & Apache NetBeans</b></i>
+                        <br>
+                        <br><b>Byte code</b>: The compiler creates a new document, coded into Java bytecode. Any device that can run Java will be able to interpret and translate this file into something that it can use. The compiled bytecode is platform Independent.
+                        <br>
+                        <br><b>JVM (Java Virtual Machine)</b>: Your friends don’t have a physical Java Machine, but they all have a virtual Java machine (implemented In software) running inside their electronic gadgets. The bytecode is read and executed by the virtual machine.</p>
+                </div>
+                <div id="bottom">
+                    <li>
+                        <ul id="reactions"><img id="heartIcon" src="../images/heartIcon.png">Javarays & 23 Others</ul>
+                        <ul id="comments">8 Comments</ul>
+                        <ul id="shares">31 Shares</ul>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
