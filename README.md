@@ -1,6 +1,6 @@
 ﻿# Windows Style | Introduction to Java
 
-![Website](https://img.shields.io/website?url=https%3A%2F%2Fgrizzey.github.io%2Fcomprog1-java-windowsstyle%2F&up_message=Live&up_color=green&down_message=Offline&down_color=red&style=for-the-badge&link=https%3A%2F%2Fgrizzey.github.io%2Fcomprog1-java-windows%2F)
+![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fjabaitech.github.io%2Fcomprog1-java-windows%2F&up_message=Online&up_color=green&down_message=Offline&down_color=red&style=for-the-badge)
 
 ![GitHub Last commit](https://img.shields.io/github/last-commit/jabaitech/comprog1-java-windows?display_timestamp=committer)
 
