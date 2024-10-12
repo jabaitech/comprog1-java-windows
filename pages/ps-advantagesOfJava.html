@@ -6,21 +6,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
+            position: fixed;
+            margin: 0;
+            position: relative;
             user-select: none;
-            padding: 30px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(29, 42, 53);
+        }
+
+        #topmenu {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: start;
+            align-items: center;
+            background-color: rgb(83, 83, 83);
+            padding: 10px;
+            padding-left: 5px;
+            padding-top: 0;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+            
+        }
+
+        #topmenu_buttons {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            list-style-type: none;
+            color: white;
+        }
+
+        #topmenu_buttons > li > button {
+            color: white;
+            background-color: transparent;
+            border: 0;
+            height: 100%;
+        }
+
+        #topmenu_buttons > li > button:hover {
+            background-color: rgb(105, 105, 105);
+            border: 0;
+            height: 100%;
+        }
+
+        .mainDisplay {
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            height: 100vh;
+        }
+
+        .mainDisplay > #canvas {
+            background-color: white;
+            margin-top: 25px;
+            height: 80%;
+            padding-top: 20px;
+        }
+
+        #leftbar {
+            background-color: rgb(83, 83, 83);
+            padding: 10px;
+            padding-left: 5px;
+            padding-top: 0;
+            font-size: 20px;
+            font-weight: bold;
+            width: 30px;
+            height: 95%;
+            margin: 0;
+        }
+
+        #rightbar {
+            background-color: rgb(66, 66, 66);
+            padding: 10px;
+            padding-left: 5px;
+            padding-top: 0;
+            font-size: 20px;
+            font-weight: bold;
+            width: 230px;
+            height: 95%;
+            margin: 0;
+            float: right;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: normal;
+            align-items: center;
+        }
+
+        #rgb_label {
+            border: 2px solid black;
+            border-bottom: 0;
+            background-color: rgb(83, 83, 83);
+            margin: 0;
+            margin-top: 10px;
+            color: white;
+            font-weight: 500;
+            width: 70px;
+            padding: 10px 0px 10px 5px;
+        }
+        
+        #rightbar > #colorSelector {
+            margin-left: 10px;
+            width: 100%;
+        }
+
+        #rgbBox {
+            width: 95%;
+            background-color: rgb(83, 83, 83);
+            border: 2px solid black;
+        }
+
+        #layers {
+            margin-left: 10px;
+            padding: 0;
+            width: 100%;
+        }
+
+        #layers_label {
+            border: 2px solid black;
+            border-bottom: 0;
+            background-color: rgb(83, 83, 83);
+            margin: 0;
+            margin-top: 10px;
+            color: white;
+            font-weight: 500;
+            width: 70px;
+            padding: 10px 0px 10px 5px;
+        }
+
+        #layers > ul {
+            border: 2px solid black;
+            background-color: rgb(83, 83, 83);
+            margin: 0;
+            list-style: none;
+            color: white;
+            padding-top: 2px;
+            padding-bottom: 30%;
+            font-weight: 200;
+            padding-left: 0;
+        }
+
+        #layers > ul > li {
+            padding-left: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: rgb(66, 66, 66);
+            margin: 0;
+            margin-bottom: 5px;
+        }
+
+        #layers_background {
+            margin: 0;
+            padding: 0;
+            width: 50px;
+            height: 30px;
+            float: left;
+            margin-right: 10px;
             background-color: white;
         }
 
-        #title {
-            background-color: bisque;
-            padding-left: 25px;
-            padding: 10px;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        #content {
+        #canvas {
             font-size: 20px;
             margin-left: 30px;
             margin-right: 20px;
@@ -30,47 +179,76 @@
             bottom: 0;
             display: flexbox;
         }
-
-        img {
-            width: 60%;
-            position: fixed;
-            display: block;
-            margin-top: 5%;
-            margin-left: 10%;
-            border-radius: 15px;
-            border: 2px solid black;
-            filter: drop-shadow(0px 0px 3px grey);
-        }
     </style>
 </head>
 
 <body oncontextmenu="return false;">
     <div id="card">
-        <div id="title">Difference of Java to other languages</div>
-        <div id="content">
-            <ul>
-                <li><b>Performance:</b> 
-                    <ul>
-                        <li>Java: Slower than C/C++ due to JVM overhead.</li>
-                        <li>Python: Generally slower than Java, interpreted language.</li>
-                        <li>JavaScript: Performance varies; often slower in computation-heavy tasks.</li>
-                    </ul>
-                </li>
-                <li><b>Syntax:</b>
-                    <ul>
-                        <li>Java: Strictly typed; requires explicit declarations.</li>
-                        <li>C#: Similar syntax to Java, more features for Windows applications.</li>
-                        <li>Python: More readable and concise syntax; dynamically typed.</li>
-                    </ul>
-                </li>
-                <li><b>Platform Independence:</b>
-                    <ul>
-                        <li>Java: Write once, run anywhere with JVM.</li>
-                        <li>C#: Primarily Windows; .NET Core supports cross-platform.</li>
-                        <li>Python: Cross-platform, but environment setup can be tricky.</li>
-                    </ul>
-                </li>
+        <div id="topmenu">
+            <ul id="topmenu_buttons">
+                <li><button type="button">File</button></li>
+                <li><button type="button">Edit</button></li>
+                <li><button type="button">Image</button></li>
+                <li><button type="button">Layer</button></li>
+                <li><button type="button">Type</button></li>
+                <li><button type="button">Select</button></li>
+                <li><button type="button">Filter</button></li>
+                <li><button type="button">3D</button></li>
+                <li><button type="button">View</button></li>
+                <li><button type="button">Plugins</button></li>
+                <li><button type="button">Window</button></li>
+                <li><button type="button">Help</button></li>
             </ul>
+        </div>
+
+        <div class="mainDisplay">
+            <div id="leftbar">
+
+            </div>
+    
+            <div id="canvas">
+                <ul>
+                    <p>Java compared to other programming languages</p>
+
+                    <li><b>Performance:</b> 
+                        <ul>
+                            <li>Java: Slower than C/C++ due to JVM overhead.</li>
+                            <li>Python: Generally slower than Java, interpreted language.</li>
+                            <li>JavaScript: Performance varies; often slower in computation-heavy tasks.</li>
+                        </ul>
+                    </li>
+                    <li><b>Syntax:</b>
+                        <ul>
+                            <li>Java: Strictly typed; requires explicit declarations.</li>
+                            <li>C#: Similar syntax to Java, more features for Windows applications.</li>
+                            <li>Python: More readable and concise syntax; dynamically typed.</li>
+                        </ul>
+                    </li>
+                    <li><b>Platform Independence:</b>
+                        <ul>
+                            <li>Java: Write once, run anywhere with JVM.</li>
+                            <li>C#: Primarily Windows; .NET Core supports cross-platform.</li>
+                            <li>Python: Cross-platform, but environment setup can be tricky.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="rightbar">
+                <div id="colorSelector">
+                    <p id="rgb_label">Color</p>
+                    <img id="rgbBox" src="../images/rgbBox.jpg">
+                </div>
+                
+                <div id="layers">
+                    <p id="layers_label">Layers</p>
+                    <ul>
+                        <li><div id="layers_background"></div>Text</li>
+                        <li><div id="layers_background"></div>Background</li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
     </div>
 </body>
