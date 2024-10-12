@@ -2,9 +2,10 @@
 
 ![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fjabaitech.github.io%2Fcomprog1-java-windows%2F&up_message=Online&up_color=green&down_message=Offline&down_color=red&style=for-the-badge)
 
+![GitHub Deployments](https://img.shields.io/github/deployments/jabaitech/comprog1-java-windows/github-pages?style=for-the-badge)
+
 ![GitHub Last commit](https://img.shields.io/github/last-commit/jabaitech/comprog1-java-windows?display_timestamp=committer)
 
-![GitHub Deployments](https://img.shields.io/github/deployments/Grizzey/comprog1-java-windows/github-pages?style=for-the-badge)
 
 ![GitHub Release](https://img.shields.io/github/v/release/jabaitech/comprog1-java-windows)
 
