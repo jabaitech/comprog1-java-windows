@@ -4,6 +4,7 @@
 
 ![GitHub deployments](https://img.shields.io/github/deployments/Grizzey/comprog1-java-windowsstyle/github-pages?style=for-the-badge)
 
+![GitHub Release](https://img.shields.io/github/v/release/jabaitech/comprog1-java-windows)
 
 ![Static Badge](https://img.shields.io/badge/Project%20Length-18%20Hours-informational?style=flat-square)
 
