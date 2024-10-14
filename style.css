@@ -13,11 +13,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0;
+    background-color: #000000;
 }
 
 #mainContainer {
-    display: flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: start;
     position: fixed;
     width: fit-content;
     height: 100%;

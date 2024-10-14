@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --panels_color: #121212;
+            --buttons_color: rgb(35, 35, 35);
+            --card_padding: 5px;
+            --border_radius: 5px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 15px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(135, 135, 135, 0.3);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(135, 135, 135, 0.5);
+        }
+
+        body {
+            position: fixed;
+            margin: 0;
+            position: relative;
+            user-select: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            padding: 7px;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        .mainDisplay {
+            display: flex;
+            flex-direction: row;
+            align-content: flex-start;
+        }
+
+        #leftbar {
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        #navigation_card {
+            padding-top: var(--card_padding);
+            background-color: var(--panels_color);
+            border-radius: var(--border_radius);
+        }
+
+        #navigation_card > li > ul {
+            margin-left: 0;
+            padding-left: 20px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        #navigation_card > li > ul:hover {
+            border-radius: var(--border_radius);
+            background-color: rgba(114, 114, 114, 0.552);
+        }
+
+        #navigationIcons {
+            width: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        #library_card {
+            padding-top: var(--card_padding);
+            padding-bottom: var(--card_padding);
+            background-color: var(--panels_color);
+            border-radius: var(--border_radius);
+            margin-top: 5px;
+            height: 460px;
+        }
+
+        #library_card > #label {
+            margin-left: 15px;
+            font-size: 17px;
+        }
+
+        #library_card > #navigation {
+            width:fit-content;
+            margin-left: 15px;
+        }
+
+        #library_card > #navigation > ul > li {
+            background-color: var(--buttons_color);
+            border-radius: 20px;
+            padding: 3px;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-right: 5px;
+        }
+
+        #playlists { /*CONTAINER OF THE PLAYLISTS / SIDEBAR PANEL*/
+            padding: 0;
+            margin: 0;
+        }
+
+        #playlists > ul { /*CONTAINER OF THE PLAYLISTS / SIDEBAR PANEL*/
+            padding-left: 5px;
+        }
+
+        #playlist {
+            border-radius: var(--border_radius);
+            margin-bottom: 2px;
+            margin-right: 10px;
+            height: 50px;
+            padding: 5px;
+            display: flex;
+            font-size: 14px;
+        }
+
+        #playlist > ul {
+            margin-left: 0;
+            margin: 0;
+        }
+
+        #playlist:hover {
+            background-color: rgba(114, 114, 114, 0.552);
+        }
+
+        #playlist-active {
+            font-size: 14px;
+            padding: 5px;
+            border-radius: var(--border_radius);
+            margin-bottom: 2px;
+            margin-right: 10px;
+            height: 50px;
+            background-color: rgba(114, 114, 114, 0.552);
+        }
+
+        #playlist-icon {
+            border-radius: 2px;
+            width: 50px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        #canvas {
+            overflow-y: scroll;
+            background: var(--panels_color);
+            background-image: linear-gradient(to bottom, #a31212, #cd0046, #2e2129, #121212, #121212);
+            background-size: cover;
+            height: 575px;
+            margin-left: 10px;
+            border-radius: var(--border_radius);
+            width: 100%;
+            background-size: cover;
+        }
+
+        #centerDisplay>#navigation {
+            margin-left: 20px;
+            width: 70px;
+        }
+
+        #navigation>ul {
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        #centerDisplay>#navigation>ul>li {
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 100%;
+            text-align: center;
+            line-height: 25px;
+            width: 30px;
+            height: 30px;
+        }
+
+        #centerDisplay>#navigation>ul>li > #left:hover {
+            background-color: rgba(45, 45, 45, 0.5);
+        }
+
+        #playlistInfo {
+            padding-left: 20px;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        #playlistInfo>li>ul {
+            margin-left: 0;
+        }
+
+        #creator_image {
+            margin-right: 10px;
+            border-radius: 100%;
+            width: 30px;
+        }
+
+        #creator {
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        #playlist_Image {
+            width: 250px;
+            background-color: white;
+            filter: drop-shadow(0px 0px 15px black);
+        }
+
+        #playlist_Name {
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        #playlist_Desc {
+            color: rgb(190, 196, 165);
+        }
+
+        #playlist_list > ul > li { 
+            color: grey;
+            height: 50px;
+            padding-left: 5px;
+            display: flex;
+            align-items: center;
+            list-style: circle;
+        }
+
+        #playlist_list>ul>li>#count {
+            font-size: 15px;
+            margin-right: 20px;
+            color: rgb(190, 196, 165);
+        }
+        
+        #playlist_list>ul>li>a {
+            color: white;
+            font-size: 20px;
+        }
+
+        #playlist_list>ul>li:hover {
+            background-color: rgba(114, 114, 114, 0.552);
+            border-radius: var(--border_radius);
+        }
+    </style>
+</head>
+
+<body oncontextmenu="return false;">
+    <div id="card">
+
+
+        <div class="mainDisplay">
+            <div id="leftbar">
+                <div id="navigation_card">
+                    <li>
+                        <ul>
+                            <div>
+                                <img src="../images/homeIcon.png" id="navigationIcons">
+                                <a>Home</a>
+                            </div>
+                        </ul>
+                        <ul>
+                            <div>
+                                <img src="../images/searchIcon.png" id="navigationIcons">
+                                <a>Search</a>
+                            </div>
+                        </ul>
+                    </li>
+                </div>
+
+                <div id="library_card">
+                    <a id="label">Your Library</a>
+                    <div id="navigation">
+                        <ul>
+                            <li>Playlists</li>
+                            <li>Podcasts</li>
+                        </ul>
+                    </div>
+                    <div id="playlists">
+                        <ul>
+                            <li id="playlist">
+                                <div><img src="../images/liked.jpg" id="playlist-icon">Liked Songs</div>
+                            </li>
+                            <li id="playlist-active">
+                                <div><img src="../images/java.png" id="playlist-icon">Java Versions</div>
+                            </li>
+                            <li id="playlist">
+                                <div><img src="../images/sosShes.jpg" id="playlist-icon">S.O.S</div>
+                            </li>
+                            <li id="playlist">
+                                <div><img src="../images/sosWhat.jpg" id="playlist-icon">Whatever that was</div>
+                            </li>
+                            <li id="playlist">
+                                <div><img src="../images/encore.jpg" id="playlist-icon">Encore</div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="canvas">
+                <div id="background"></div>
+                <div id="centerDisplay">
+                    <div id="navigation">
+                        <ul>
+                            <li id="left"> < </li> 
+                            <li id="right"> > </li>
+                        </ul>
+                    </div>
+
+                    <div id="playlistInfo">
+                        <img id="playlist_Image" src="../images/java.png">
+                        <li>
+                            <ul><a id="playlist_Name">Java Versions</a></ul>
+                            <ul><a id="playlist_Desc">Over time Java has implemented more classes and methods to be used.</a></ul>
+                            <ul><span id="creator"><img src="../images/jamesGosling.jpg" id="creator_image">James Gosling</span></ul>
+                        </li>
+                    </div>
+
+                    <div id="playlist_list">
+                        <ul>
+                            <li><a id="count">1.</a><a>JDK 1.0 - January 1996</a></li>
+                            <li><a id="count">3.</a><a>J2SE 1.2 - December 1998</a></li>
+                            <li><a id="count">2.</a><a>JDK 1.1 - February 1997</a></li>
+                            <li><a id="count">5.</a><a>J2SE 1.4 - February 2002</a></li>
+                            <li><a id="count">4.</a><a>J2SE 1.3 - May 2000</a></li>
+                            <li><a id="count">6.</a><a>Java SE 5.0 - September 2004</a></li>
+                            <li><a id="count">7.</a><a>Java SE 6 - December 2006</a></li>
+                            <li><a id="count">8.</a><a>Java SE 7 - July 2011</a></li>
+                            <li><a id="count">9.</a><a>Java SE 8 - March 2014</a></li>
+                            <li><a id="count">10.</a><a>Java SE 9 - September 2017</a></li>
+                            <li><a id="count">11.</a><a>Java SE 10 - March 2018</a></li>
+                            <li><a id="count">12.</a><a>Java SE 11 - September 2018</a></li>
+                            <li><a id="count">13.</a><a>Java SE 12 - March 2019</a></li>
+                            <li><a id="count">14.</a><a>Java SE 13 - September 2019</a></li>
+                            <li><a id="count">15.</a><a>Java SE 14 - March 2020</a></li>
+                            <li><a id="count">16.</a><a>Java SE 15 - September 2020</a></li>
+                            <li><a id="count">17.</a><a>Java SE 16 - March 2021</a></li>
+                            <li><a id="count">18.</a><a>Java SE 17 - September 2021</a></li>
+                            <li><a id="count">19.</a><a>Java SE 18 - March 2022</a></li>
+                            <li><a id="count">20.</a><a>Java SE 19 - September 2022</a></li>
+                            <li><a id="count">21.</a><a>Java SE 20 - March 2023</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
