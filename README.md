@@ -9,4 +9,4 @@
 > [!NOTE]
 > This is a school project
 
-[Try out](https://jabaitech.github.io/comprog1-java-windows/)
+[Try out](https://jabaitech.github.io/comprog1-java-windows/))
