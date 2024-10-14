@@ -35,6 +35,15 @@
             padding: 7px;
         }
 
+        img,
+        input {
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            /*user-drag: none;*/
+        }
+
         ul,
         li {
             list-style: none;
@@ -51,6 +60,7 @@
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
+            justify-content: space-evenly;
         }
 
         #navigation_card {
@@ -59,7 +69,7 @@
             border-radius: var(--border_radius);
         }
 
-        #navigation_card > li > ul {
+        #navigation_card>li>ul {
             margin-left: 0;
             padding-left: 20px;
             height: 35px;
@@ -69,7 +79,7 @@
             margin-right: 20px;
         }
 
-        #navigation_card > li > ul:hover {
+        #navigation_card>li>ul:hover {
             border-radius: var(--border_radius);
             background-color: rgba(114, 114, 114, 0.552);
         }
@@ -89,17 +99,17 @@
             height: 460px;
         }
 
-        #library_card > #label {
+        #library_card>#label {
             margin-left: 15px;
             font-size: 17px;
         }
 
-        #library_card > #navigation {
-            width:fit-content;
+        #library_card>#navigation {
+            width: fit-content;
             margin-left: 15px;
         }
 
-        #library_card > #navigation > ul > li {
+        #library_card>#navigation>ul>li {
             background-color: var(--buttons_color);
             border-radius: 20px;
             padding: 3px;
@@ -108,12 +118,14 @@
             margin-right: 5px;
         }
 
-        #playlists { /*CONTAINER OF THE PLAYLISTS / SIDEBAR PANEL*/
+        #playlists {
+            /*CONTAINER OF THE PLAYLISTS / SIDEBAR PANEL*/
             padding: 0;
             margin: 0;
         }
 
-        #playlists > ul { /*CONTAINER OF THE PLAYLISTS / SIDEBAR PANEL*/
+        #playlists>ul {
+            /*CONTAINER OF THE PLAYLISTS / SIDEBAR PANEL*/
             padding-left: 5px;
         }
 
@@ -127,7 +139,7 @@
             font-size: 14px;
         }
 
-        #playlist > ul {
+        #playlist>ul {
             margin-left: 0;
             margin: 0;
         }
@@ -158,7 +170,7 @@
             background: var(--panels_color);
             background-image: linear-gradient(to bottom, #a31212, #cd0046, #2e2129, #121212, #121212);
             background-size: cover;
-            height: 575px;
+            height: 600px;
             margin-left: 10px;
             border-radius: var(--border_radius);
             width: 100%;
@@ -187,7 +199,7 @@
             height: 30px;
         }
 
-        #centerDisplay>#navigation>ul>li > #left:hover {
+        #centerDisplay>#navigation>ul>li>#left:hover {
             background-color: rgba(45, 45, 45, 0.5);
         }
 
@@ -228,7 +240,7 @@
             color: rgb(190, 196, 165);
         }
 
-        #playlist_list > ul > li { 
+        #playlist_list>ul>li {
             color: grey;
             height: 50px;
             padding-left: 5px;
@@ -242,7 +254,7 @@
             margin-right: 20px;
             color: rgb(190, 196, 165);
         }
-        
+
         #playlist_list>ul>li>a {
             color: white;
             font-size: 20px;
@@ -303,7 +315,7 @@
                             <li id="playlist">
                                 <div><img src="../images/encore.jpg" id="playlist-icon">Encore</div>
                             </li>
-                            
+
                         </ul>
                     </div>
                 </div>
@@ -314,8 +326,9 @@
                 <div id="centerDisplay">
                     <div id="navigation">
                         <ul>
-                            <li id="left"> < </li> 
-                            <li id="right"> > </li>
+                            <li id="left">
+                                < </li> <li id="right"> >
+                            </li>
                         </ul>
                     </div>
 
@@ -323,8 +336,10 @@
                         <img id="playlist_Image" src="../images/java.png">
                         <li>
                             <ul><a id="playlist_Name">Java Versions</a></ul>
-                            <ul><a id="playlist_Desc">Over time Java has implemented more classes and methods to be used.</a></ul>
-                            <ul><span id="creator"><img src="../images/jamesGosling.jpg" id="creator_image">James Gosling</span></ul>
+                            <ul><a id="playlist_Desc">Over time Java has implemented more classes and methods to be
+                                    used.</a></ul>
+                            <ul><span id="creator"><img src="../images/jamesGosling.jpg" id="creator_image">James
+                                    Gosling</span></ul>
                         </li>
                     </div>
 

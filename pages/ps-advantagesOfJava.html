@@ -14,6 +14,15 @@
             background-color: rgb(29, 42, 53);
         }
 
+        img,
+        input {
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            /*user-drag: none;*/
+        }
+
         #topmenu {
             display: flex;
             flex-direction: row;
@@ -28,7 +37,7 @@
             font-size: 20px;
             font-weight: bold;
             margin: 0;
-            
+
         }
 
         #topmenu_buttons {
@@ -39,14 +48,14 @@
             color: white;
         }
 
-        #topmenu_buttons > li > button {
+        #topmenu_buttons>li>button {
             color: white;
             background-color: transparent;
             border: 0;
             height: 100%;
         }
 
-        #topmenu_buttons > li > button:hover {
+        #topmenu_buttons>li>button:hover {
             background-color: rgb(105, 105, 105);
             border: 0;
             height: 100%;
@@ -59,7 +68,7 @@
             height: 100vh;
         }
 
-        .mainDisplay > #canvas {
+        .mainDisplay>#canvas {
             background-color: white;
             margin-top: 25px;
             height: 80%;
@@ -108,8 +117,8 @@
             width: 70px;
             padding: 3px 0px 3px 5px;
         }
-        
-        #rightbar > #colorSelector {
+
+        #rightbar>#colorSelector {
             margin-left: 10px;
             width: 100%;
         }
@@ -138,7 +147,7 @@
             padding: 3px 0px 3px 5px;
         }
 
-        #layers > ul {
+        #layers>ul {
             border: 1px solid black;
             background-color: rgb(83, 83, 83);
             margin: 0;
@@ -150,7 +159,7 @@
             padding-left: 0;
         }
 
-        #layers > ul > li {
+        #layers>ul>li {
             padding-left: 10px;
             padding-top: 10px;
             padding-bottom: 10px;
@@ -205,12 +214,12 @@
             <div id="leftbar">
 
             </div>
-    
+
             <div id="canvas">
                 <ul>
                     <p>Java compared to other programming languages</p>
 
-                    <li><b>Performance:</b> 
+                    <li><b>Performance:</b>
                         <ul>
                             <li>Java: Slower than C/C++ due to JVM overhead.</li>
                             <li>Python: Generally slower than Java, interpreted language.</li>
@@ -239,12 +248,16 @@
                     <p id="rgb_label">Color</p>
                     <img id="rgbBox" src="../images/rgbBox.jpg">
                 </div>
-                
+
                 <div id="layers">
                     <p id="layers_label">Layers</p>
                     <ul>
-                        <li><div id="layers_background"></div>Text</li>
-                        <li><div id="layers_background"></div>Background</li>
+                        <li>
+                            <div id="layers_background"></div>Text
+                        </li>
+                        <li>
+                            <div id="layers_background"></div>Background
+                        </li>
                     </ul>
                 </div>
 

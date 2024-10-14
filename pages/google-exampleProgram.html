@@ -15,6 +15,15 @@
             background-color: rgb(29, 42, 53);
         }
 
+        img,
+        input {
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            /*user-drag: none;*/
+        }
+
         #main {
             padding: 50px 30px;
             height: max-content;
@@ -174,7 +183,6 @@
             text-decoration: none;
             border-radius: 10px;
         }
-
     </style>
 </head>
 
@@ -201,7 +209,7 @@
             <p id="console-label">Console</p>
             <code>Output: Hello, World!</code>
         </span>
-        
+
         <p><a href="https://www.w3schools.com/" target="_blank" id="link">Learn more about Java at w3schools.com</a></p>
     </div>
 </body>

@@ -1,16 +1,43 @@
+/*
+    Simplified and hardcoded kasi ang buggy ahhaha
+*/
+let count = 0;
 function openWindow() {
-    document.getElementById('WINDOW_HOLDER').style.display = 'flex';
-}
 
+    try {
+        document.getElementById('WINDOW_HOLDER').style.display = 'flex';
+    } catch(err) {
+        console.error("Error: " + err)
+    }
+    
+}
 function closeWindow() {
-    document.getElementById('WINDOW_HOLDER').style.display = 'none';
+    try {
+        document.getElementById('WINDOW_HOLDER').style.display = 'none';
+    } catch(err) {
+        console.error("Error: " + err)
+    }   
 }
 
 function changeIframe(url, windowName, icon) {
-    openWindow();
     document.getElementById('content-iframe').src = url;
     document.getElementById('windowName').innerText = windowName;
     document.getElementById('topbarIcon').src = icon
+    openWindow();
+}
+
+function startPanel() {
+    if (count == 0) {
+        count = count + 1;
+        document.getElementById('start').style.display = 'flex';
+    } else {
+        count = 0;
+        document.getElementById('start').style.display = 'none';
+    }
+}
+
+function forceCloseStartPanel() {
+    document.getElementById('start').style.display = 'none';
 }
 
 function updateTime() {
@@ -29,11 +56,27 @@ function updateDate() {
     document.getElementById("date").innerText = `${month}/${day}/${year}`;
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById('WINDOW_HOLDER').style.display = 'none';
+document.addEventListener("DOMContentLoaded", function () {
+    closeWindow();
+    forceCloseStartPanel();
     updateTime();
     updateDate();
     setInterval(updateTime, 60000);
 });
 
 document.addEventListener('contextmenu', event => event.preventDefault());
+
+window.addEventListener('click', (e) => {
+    const startPanel = document.getElementById('start');
+    const button = document.getElementById('windowsIconHolder') || document.getElementById('windowsIcon');
+
+    try {
+        if (!startPanel.contains(e.target) && e.target !== button) {
+            forceCloseStartPanel();
+        }
+    } catch(err) {
+        console.log("Caught Error:" + err);
+    }
+
+    
+});

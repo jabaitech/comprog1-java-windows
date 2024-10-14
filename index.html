@@ -57,7 +57,7 @@
                 <button id="closeWindowButton" onclick="closeWindow()">X</button>
             </div>
             <div id="window">
-                <iframe name="FRAME" id="content-iframe" frameborder="0" scrolling="no" allowTransparency="no" src="/pages/aboutJava.html"></iframe>
+                <iframe name="FRAME" id="content-iframe" frameborder="0" scrolling="no" allowTransparency="no" src=""></iframe>
             </div>
         </div>
         
@@ -65,15 +65,41 @@
     </div>
 
     <div id="bottomBar">
-        <!-- <a class="windowsIconHolder"> -->
+        <div class="windowsIconHolder" onclick="startPanel()">
             <input id="windowsIcon" type="image" src="./images/windowsicon.png">
-        <!-- </a> -->
+        </div>
         <input type="text" placeholder="Type here to search..." id="bar">
         
        
         <div id="timeContainer">
             <a id="time">7:00 AM</a>
             <a id="date">1/1/1999</a>
+        </div>
+    </div>
+
+    <div id="startHolder">
+        <div id="start">
+            <div id="start_1st">
+                <img src="/images/java.png">
+            </div>
+            <div id="start_2nd">
+                <li>
+                    <ul>Recently added</ul>
+                    <ul id="startApps" onclick="changeIframe('./pages/google-exampleProgram.html', 'Google Chrome', './images/chromeicon.png'), forceCloseStartPanel()"><div><img src="/images/chromeicon.png"><a>Google Chrome</a></div></ul>
+                    <ul id="startApps" onclick="changeIframe('./pages/roblox-aboutjava.html', 'Roblox', './images/roblox.png'), forceCloseStartPanel()"><div><img src="/images/roblox.png"><a>Roblox Launcher</a></div></ul>
+                    <ul id="startApps" onclick="changeIframe('./pages/facebook-javaRunning.html', 'Facebook Desktop', './images/facebook.png'), forceCloseStartPanel()"><div><img src="/images/facebook.png"><a>Facebook Desktop</a></div></ul>
+                    <ul id="startApps" onclick="changeIframe('./pages/spotify-historyOfJava.html', 'Spotify', './images/spotifyicon.png'), forceCloseStartPanel()"><div><img src="/images/spotifyicon.png"><a>Spotify</a></div></ul>
+                    <ul id="startApps" onclick="changeIframe('./pages/valo-usesOfJava.html', 'Riot Games', './images/valorant.png'), forceCloseStartPanel()"><div><img src="/images/valorant.png"><a>Valorant</a></div></ul>
+                    <ul id="startApps" onclick="changeIframe('./pages/ps-advantagesOfJava.html', 'Adobe Photoshop', './images/photoshop.png'), forceCloseStartPanel()"><div><img src="/images/photoshop.png"><a>Adobe Photoshop</a></div></ul>
+                </li>
+            </div>
+            <div id="start_3rd">
+                <div id="gridItem">Microsoft Store</div>
+                <div id="gridItem">Calculator</div>
+                <div id="gridItem">Mail</div>
+                <div id="gridItem">Minecraft</div>
+                <div id="gridItem" onclick="changeIframe('./pages/photos.html', 'Photos', './images/photos.png'), forceCloseStartPanel()"><img src="/images/backburners.png"></div>
+            </div>
         </div>
     </div>
 </body>

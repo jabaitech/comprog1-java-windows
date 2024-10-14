@@ -14,6 +14,15 @@
             background-size: cover;
         }
 
+        img,
+        input {
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            /*user-drag: none;*/
+        }
+
         #title {
             background-color: bisque;
             padding-left: 25px;
@@ -28,7 +37,8 @@
             width: auto;
             margin: 0;
             justify-content: space-between;
-            background-color: rgba(0, 0, 0, 0.548);;
+            background-color: rgba(0, 0, 0, 0.548);
+            ;
         }
 
         #sidebar {
@@ -121,7 +131,7 @@
             align-items: center;
         }
 
-        ul > li {
+        ul>li {
             list-style-type: none;
             padding-bottom: 20px;
             padding-left: auto;
@@ -142,9 +152,11 @@
                 <img src="../images/riotlogo.png" id="riotlogo">
 
                 <span class="login-creds">
-                    <input type="text" id="username" placeholder="USERNAME" autocomplete="off">
+                    <input type="text" id="username" placeholder="USERNAME" autocomplete="off" readonly
+                        onfocus="this.removeAttribute('readonly');">
 
-                    <input type="password" id="password" placeholder="PASSWORD" autocomplete="off">
+                    <input type="password" id="password" placeholder="PASSWORD" autocomplete="off" readonly
+                        onfocus="this.removeAttribute('readonly');">
                 </span>
 
                 <span class="extra">

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            user-select: none;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(37, 37, 37);
+            background-size: cover;
+            padding: 20px;
+        }
+
+        img,
+        input {
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            /*user-drag: none;*/
+        }
+
+        p {
+            color: white;
+            font-size: 20px;
+            border-bottom: 1px solid grey;
+        }
+        
+        #main {
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            overflow-y: scroll;
+        }
+
+        #square {
+            width: 300px;
+            margin: 2px;
+        }
+    </style>
+</head>
+
+<body oncontextmenu="return false;">
+    <p>Photos</p>
+    <div id="main">
+        <img id="square" src="../images/backburners.png">
+        <img id="square" src="../images/letsgo.jpg">
+        <img id="square" src="../images/letsgo1.jpg">
+        <img id="square" src="../images/monke.jpg">
+        <img id="square" src="../images/doge.png">
+
+    </div>
+
+</body>
+
+</html>

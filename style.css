@@ -10,10 +10,17 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     user-select: none;
     margin: 0;
-    display: flex;
     justify-content: center;
     align-items: center;
     background-color: #000000;
+}
+
+img, input {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    /*user-drag: none;*/
 }
 
 #mainContainer {
@@ -27,6 +34,7 @@ body {
     top: 0;
     left: 0;
     padding: 10px;
+    /* z-index: 999; */
 }
 
 #ICON {
@@ -107,6 +115,7 @@ p {
 
 #windowsIcon:hover {
     background-color: #2b2b2b;
+    cursor: default;
 }
 
 #bar {
@@ -137,6 +146,7 @@ p {
     color: white;
     margin-left: auto;
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 #time {
@@ -155,26 +165,25 @@ p {
     box-shadow: 1px 1px 10px #000000;
     background-color: rgba(255, 255, 255, 1);
     width: 70%;
-    height: 90%;
+    height: fit-content;
     max-width: 90%;
     max-height: fit-content;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     position: relative;
     margin: auto;
 }
 
 #WINDOW_HOLDER {
-    display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     width: 100%;
+    height: calc(100vh - 45px);
 }
 
 #window {
     background-color: black;
     overflow: hidden;
-    height: inherit;
+    /* height: inherit; */
     width: 100%;
     /* OLD
     margin: auto;
@@ -233,7 +242,7 @@ p {
 #window > iframe {
     overflow: auto;
     width: 100%;
-    height: 100%;
+    height: 80vh;
     border: none;
     display: inline-block;
 }
@@ -259,4 +268,113 @@ p {
 
 #windowName {
     color:#000000
+}
+
+#startHolder {
+    height: 100vh;
+    top: 0;
+    position: fixed;
+    background-color: transparent;
+}
+
+#start {
+    width: 600px;
+    height: 450px;
+    background-color: rgba(24, 24, 24, 0.95);
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    color: white;
+    margin-bottom: 45px;
+    bottom: 0;
+}
+
+#start_1st {
+    z-index: inherit;
+    height: 100%;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+#start_1st > img {
+    background-color: white;
+    border-radius: 50px;
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+#start_2nd {
+    z-index: inherit;
+    height: 100%;
+    width: 270px;
+}
+
+#start_2nd > li {
+    list-style-type: none;
+    padding-top: 10px;
+}
+
+#start_2nd > li > ul {
+    margin: 0;
+    padding: 0;
+    padding-left: 5px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+#startApps:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#startApps > div {
+    width: inherit;
+    height: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-left: 10px;
+    font-weight: 100;
+}
+
+#startApps > div > img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+#start_3rd {
+    z-index: inherit;
+    height: 100%;
+    width: 280px;
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#start_3rd > #gridItem {
+    background-color: rgba(78, 78, 78, 0.2);
+    height: 65px;
+    width: 65px;
+    padding: 10px;
+    margin: 2px;
+}
+
+#start_3rd > #gridItem:hover {
+    background-color: rgba(78, 78, 78, 0.5);
+}
+
+#start_3rd > #gridItem > img {
+    width: 100%;
 }
