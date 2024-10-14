@@ -4,7 +4,7 @@
 
 ![GitHub deployments](https://img.shields.io/github/deployments/jabaitech/comprog1-java-windows/github-pages?style=for-the-badge&label=Build%20Status)
 
-![GitHub Last commit](https://img.shields.io/github/last-commit/jabaitech/comprog1-java-windows?display_timestamp=committer) ![GitHub Release](https://img.shields.io/github/v/release/jabaitech/comprog1-java-windows) ![Static Badge](https://img.shields.io/badge/Project%20Length-18%20Hours-informational?style=flat-square)
+![GitHub Last commit](https://img.shields.io/github/last-commit/jabaitech/comprog1-java-windows?display_timestamp=committer) ![GitHub Release](https://img.shields.io/github/v/release/jabaitech/comprog1-java-windows) ![Static Badge](https://img.shields.io/badge/Project%20Length-27%20Hours-informational?style=flat-square)
 
 > [!NOTE]
 > This is a school project
