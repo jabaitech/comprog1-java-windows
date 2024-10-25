@@ -7,6 +7,6 @@
 ![GitHub Last commit](https://img.shields.io/github/last-commit/jabaitech/comprog1-java-windows?display_timestamp=committer) ![GitHub Release](https://img.shields.io/github/v/release/jabaitech/comprog1-java-windows) ![Static Badge](https://img.shields.io/badge/Project%20Length-27%20Hours-informational?style=flat-square)
 
 > [!NOTE]
-> This is a school project
+> This is a school project / Final Grade: 100%
 
 [Try out](https://jabaitech.github.io/comprog1-java-windows/)
